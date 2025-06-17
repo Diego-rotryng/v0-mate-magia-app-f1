@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MateMagia</title>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffcc70, #ffd6e0);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0.2em 0;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .maguito {
+      max-width: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧙‍♂️ MateMagia</h1>
+  <p>Una app mágica para aprender matemática jugando</p>
+  <img src="/icon-512.png" alt="Maguito" class="maguito" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').then(
+          (registration) => {
+            console.log('Service Worker registrado con éxito:', registration.scope);
+          },
+          (err) => {
+            console.log('Error al registrar el Service Worker:', err);
+          }
+        );
+      });
+    }
+  </script>
+</body>
+</html>
