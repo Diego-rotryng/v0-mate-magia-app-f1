@@ -20,15 +20,5 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/placeholder.png",
-      "sizes": "540x960",
-      "type": "image/png"
-    }
-  ],
-  "shortcuts": [],
-  "related_applications": [],
-  "prefer_related_applications": false
+  ]
 }
