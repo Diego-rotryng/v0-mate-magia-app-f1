@@ -40,12 +40,32 @@
       max-width: 200px;
       margin-top: 20px;
     }
+    .boton-prueba {
+      margin-top: 30px;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 1.1em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .boton-prueba:hover {
+      background-color: #e055a8;
+    }
   </style>
 </head>
 <body>
   <h1>🧙‍♂️ MateMagia</h1>
   <p>Una app mágica para aprender matemática jugando</p>
   <img src="/icon-512.png" alt="Maguito" class="maguito" />
+
+  <!-- Evento personalizado de prueba -->
+  <button class="boton-prueba" onclick="gtag('event', 'test_click', { 'event_category': 'Debug', 'event_label': 'Botón Prueba' });">
+    Enviar evento de prueba
+  </button>
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
